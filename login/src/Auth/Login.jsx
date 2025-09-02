@@ -18,7 +18,7 @@ const Login = () => {
       </div>
 
       {/* Main glass container */}
-      <section className="relative bg-transparent backdrop-blur-md border border-white/10 shadow-2xl w-[90%] max-w-4xl flex justify-center items-center py-8 rounded-2xl min-h-[80vh] my-8 mx-4">
+      <section className="relative bg-radial from-[#0085FF]/90 to-[#003465]/40 backdrop-blur-md border border-white/10 shadow-2xl w-[90%] max-w-4xl flex justify-center items-center py-8 rounded-2xl min-h-[80vh] my-8 mx-4">
         {/* Decorative elements with improved blending */}
         <div className="hidden sm:block absolute bottom-10 left-10 md:left-20 w-40 h-40 md:w-60 md:h-60 mix-blend-lighten opacity-60">
           <img
@@ -124,7 +124,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-3 text-white font-medium shadow-lg hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent transition-all duration-200">
+              className="w-full rounded-lg bg-[#003465] px-4 py-3 text-white font-medium shadow-lg hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent transition-all duration-200">
               Sign in
             </button>
           </form>

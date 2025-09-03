@@ -4,8 +4,29 @@ import login1 from "../assets/login1.png";
 import login2 from "../assets/login3.png";
 import login3 from "../assets/login5.png";
 import login4 from "../assets/login2.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const email = React.useRef(null);
+  const password = React.useRef(null);
+  const navigate = useNavigate();
+
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    // console.log(email.current.value);
+    // console.log(password.current.value);
+    const userEmail = email.current.value;
+    const userPassword = password.current.value;
+    if (
+      userEmail === "Lor@gmail.com" &&
+      userPassword === "1234"
+    ) {
+      localStorage.setItem("isLogIn", true);
+      navigate("/dashboard");
+    } else {
+      alert("Login failed");
+    }
+  };
   return (
     <main className="relative flex min-h-screen items-center justify-center bg-radial from-[#0085FF] to-[#003465] overflow-hidden">
       {/* Background decorative elements with enhanced blending */}
@@ -79,7 +100,8 @@ const Login = () => {
 
           <form
             className="space-y-4"
-            aria-label="Login form">
+            aria-label="Login form"
+            onSubmit={(event) => onSubmitHandler(event)}>
             <div>
               <label
                 htmlFor="email"
@@ -91,6 +113,7 @@ const Login = () => {
                 id="email"
                 name="email"
                 aria-required="true"
+                ref={email}
                 required
                 placeholder="you@example.com"
                 className="mt-1 w-full rounded-lg bg-white/5 border border-white/20 px-4 py-3 text-sm shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-white placeholder-white/70"
@@ -106,6 +129,7 @@ const Login = () => {
               <input
                 type="password"
                 id="password"
+                ref={password}
                 name="password"
                 aria-required="true"
                 required

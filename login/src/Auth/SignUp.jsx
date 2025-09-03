@@ -65,7 +65,7 @@ const SignUp = () => {
         </div>
 
         <div
-          className="w-full max-w-sm rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl py-6 md:py-8 text-white px-6 md:px-16"
+          className="w-full max-w-sm rounded-2xl backdrop-blur-lg border border-white/20 shadow-2xl py-6 md:py-8 text-white px-6 md:px-16"
           aria-labelledby="signup-title">
           <h1
             id="signup-title"
